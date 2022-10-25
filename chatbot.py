@@ -19,7 +19,7 @@ colorama.init()
 from colorama import Fore, Style, Back
 
 import os
-from sklearn.preprocessing import LabelEncoder
+
 
 import random
 import pickle
@@ -78,4 +78,5 @@ def chat():
     return str(response)
 
 if __name__ == "__main__":
-    app.run(APP_DEBUG=False, host="0.0.0.0")
+    app.run()
+    #app.run(APP_DEBUG=False, host="0.0.0.0")
