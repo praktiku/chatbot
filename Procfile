@@ -1,1 +1,1 @@
-web: gunicorn app:chatbot/chatapp.py
+web: gunicorn chatbot/chatapp
