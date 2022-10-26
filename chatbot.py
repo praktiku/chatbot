@@ -79,4 +79,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run()
-    #app.run(APP_DEBUG=False, host="0.0.0.0")
+    app.run(APP_DEBUG=False, host="0.0.0.0")
