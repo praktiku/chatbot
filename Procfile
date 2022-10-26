@@ -1,1 +1,1 @@
-web: gunicorn run:chatbot/chatapp
+web: gunicorn run:chatbot
