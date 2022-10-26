@@ -116,12 +116,20 @@
           document
             .getElementById("userInput")
             .scrollIntoView({ block: "start", behavior: "smooth" });
+          
+          var typingText = '<p class="botText" id="typing"><span>Typing...</span></p>';
+          $('#chatbox').append(typingText).fadeIn();
+          
           $.get("/get", { msg: rawText }).done(function(data) {
             var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-            $("#chatbox").append(botHtml);
-            document
-              .getElementById("userInput")
-              .scrollIntoView({ block: "start", behavior: "smooth" });
+            
+            $('#typing').remove();
+            setTimeout(() => {
+                $("#chatbox").append(botHtml);
+                document
+                    .getElementById("userInput")
+                    .scrollIntoView({ block: "start", behavior: "smooth" });
+            }, 200);
           });
         }
         // Event Listener Ketika Enter Maka Lakukan Jalankan getBotResposne
